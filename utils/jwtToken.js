@@ -3,7 +3,7 @@
 const sendToken = async (user, statusCode, res) => {
   const token = await user.getJWTToken()
 
-  
+  // console.log("jwt token : ", token)
   // options for cookie
   const options = {
     expires: new Date(
@@ -19,6 +19,8 @@ const sendToken = async (user, statusCode, res) => {
     user,
     token,
   })
-};
 
-module.exports = sendToken;
+  // res.send("cookies set")
+}
+
+module.exports = sendToken
