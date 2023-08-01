@@ -11,6 +11,7 @@ const sendToken = async (user, statusCode, res) => {
     ),
     httpOnly: false,
     sameSite: 'None',
+    secure: true,
   }
 
   res.cookie("token", token, options)
